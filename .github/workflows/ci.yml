@@ -207,7 +207,7 @@ jobs:
       run: |
         cd main
         export DYLD_LIBRARY_PATH="$VULKAN_SDK/lib:$DYLD_LIBRARY_PATH"
-        export PATH="$VULKAN_SDK:$VULKAN_SDK/bin:$GITHUB_WORKSPACE/../vsg-$GITHUB_SHA:$PATH"
+        export PATH="$VULKAN_SDK:$VULKAN_SDK/bin:$GITHUB_WORKSPACE/../vsg-$GITHUB_SHA:/Users/runner/miniconda3/condabin:$PATH"
         cmake .
         make -j 2
         make install
