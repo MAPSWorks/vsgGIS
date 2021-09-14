@@ -206,6 +206,7 @@ jobs:
     - name: vsgGIS CMake Configure - Build and Install
       run: |
         cd main
+        gdal-config --version
         export DYLD_LIBRARY_PATH="$VULKAN_SDK/lib:$DYLD_LIBRARY_PATH"
         export PATH="$VULKAN_SDK:$VULKAN_SDK/bin:$GITHUB_WORKSPACE/../vsg-$GITHUB_SHA:/Users/runner/miniconda3/condabin:$PATH"
         cmake .
